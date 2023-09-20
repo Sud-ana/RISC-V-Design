@@ -38,9 +38,13 @@ Finally, I viewed the object file through object dump to interpret the assembly 
 # Testbench setup to generate the firmware to load onto memory
 Now inorder to test the RISC-V core, we create a testbench to load the c code's assembly hex code onto memory. The RISC-V core processor immplemented through a picorv32 RTL reads this hex code and dumps the output into the standard output on the terminal.
 
+A snapshot of the collaterals whch has a RISC-V core implementation 
 ![C-Source code](/assets/Day2_collateral_Files_before_running_hex_script.png)
 
+Changing permissions of script to generate the hext code and run the testbench script
 ![C-Source code](/assets/Day2_Run_script_to_generate_hex_firmware_for_testbench.png)
 
+Firmware bit-stream generated through the script. 
 ![C-Source code](/assets/Day2_Firmware_generated_in_filelist.png)
+
 
