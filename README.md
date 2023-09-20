@@ -35,4 +35,12 @@ Then I simulated the object file through spike with debug option:
 Finally, I viewed the object file through object dump to interpret the assembly instruction set
   * Riscv64-unknown-elf-objdump -d 1to9_custom.o | less
 
+# Testbench setup to generate the firmware to load onto memory
+Now inorder to test the RISC-V core, we create a testbench to load the c code's assembly hex code onto memory. The RISC-V core processor immplemented through a picorv32 RTL reads this hex code and dumps the output into the standard output on the terminal.
+
+![C-Source code](/assets/Day2_collateral_Files_before_running_hex_script.png)
+
+![C-Source code](/assets/Day2_Run_script_to_generate_hex_firmware_for_testbench.png)
+
+![C-Source code](/assets/Day2_Firmware_generated_in_filelist.png)
 
