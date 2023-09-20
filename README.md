@@ -18,3 +18,17 @@ In order to demonstrate the process of high level language interpretation into m
 ![C-Source code](/assets/Day1_CSourceCode.png)
 
 ![C-Source code](/assets/Day1_AssemblerOutput.png)
+
+# Simulate a C program with assembly function call
+We generate a assembly function and call that function within the C code while compiling using the gcc based riscV compiler 
+
+![C-Source code](/assets/Day2_CCode.png)
+![C-Source code](/assets/Day2_AssemblyIncrementCode.png)
+![C-Source code](/assets/Day2_SourceAndAssemblyFile.png)
+
+To compile and generate object file I used the following instruction:
+  * riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o 1to9_custom.o  1to9_custom.c load.S 
+Then I simulated the object file through spike with debug option: 
+  * Spike pk 1to9_custom.o
+Finally I viewed the object file through object dump to interpret the assembly instruction set
+  * Riscv64-unknown-elf-objdump -d 1to9_custom.o | less
